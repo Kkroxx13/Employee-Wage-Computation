@@ -10,6 +10,8 @@ namespace EmployeeWageComputationProblem
             Random random = new Random();
             int day = random.Next(0, 2);
 
+            Console.WriteLine("WELCOME TO EMPLOYEE WAGE COMPUTATION\n");
+
             if(day==full_day)
             {
                 Console.WriteLine("Employee is Present");
