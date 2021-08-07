@@ -4,32 +4,23 @@ namespace EmployeeWageComputationProblem
 {
     class Program
     {
+        public int Wage_Per_Hour = 20;
         static void Main(string[] args)
         {
-            int full_day = 1;
+            int Wage_hourly = 20;
             Random random = new Random();
             int day = random.Next(0, 2);
 
             Console.WriteLine("WELCOME TO EMPLOYEE WAGE COMPUTATION\n");
 
-            if(day==full_day)
-            {
-                Console.WriteLine("Employee is Present");
+            EmployeeDetails employeedetails = new EmployeeDetails();
+            employeedetails.Presenty();
+            EmployeeSalary salary = new EmployeeSalary();
+            salary.Salary();
 
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
-            }
 
-            if (day == full_day)
-            {
-                Console.WriteLine("Enter the number of working days");
-                int days = Convert.ToInt32(Console.ReadLine());
-                int wage = days * 8 * 20;
-
-                Console.WriteLine($"Employee wage is {wage}");
-            }
-        }
+         }
+        
     }
+
 }
